@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping</title>
+        <meta name="viewport" content="user-scalable=no">
+        <!-- <meta name="theme-color" content="#007fff"> -->
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="index.css">
+        <link rel="manifest" href="manifest.json">
+        <script src="index.js" defer></script>
+        <script>
+            if (typeof navigator.serviceWorker !== 'undefined') {
+                navigator.serviceWorker.register('pwabuilder-sw.js')
+            }
+        </script>
+    </head>
+    <body>
+        <div class="total_price"></div>
+        <table class="t">
+            <tr>
+                <td style="width: 680px; height: 100px;">
+                    <div class="input_wrap">
+                        <input class="input_info" type="text" placeholder="Name">
+                        <div class="underline"></div>
+                    </div>
+                </td>
+                <td rowspan="3" style="width: 300px;">
+                    <button class="add">Add</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 680px; height: 100px;">
+                    <div class="input_wrap">
+                        <input class="input_info" type="text" inputmode="numeric" placeholder="Price">
+                        <div class="underline"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 680px; height: 100px;">
+                    <div class="input_wrap">
+                        <input class="input_info" type="text" inputmode="numeric" placeholder="Quantity">
+                        <div class="underline"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="shopping_list">
+        </div>
+    </body>
+</html>
