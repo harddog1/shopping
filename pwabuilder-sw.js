@@ -1,8 +1,6 @@
-const cachename = "hello";
+const cachename = "shopping";
 const cachefiles = [
     "index.html",
-    "a.html",
-    "b.html",
     "index.css",
     "index.js",
     "icons/icon-192.png",

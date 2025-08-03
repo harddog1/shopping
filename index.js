@@ -25,7 +25,7 @@ function load() {
             item.appendChild(price);
 
             shopping_list.appendChild(item);
-            total_price_value += a[i][2];
+            total_price_value += (a[i][2] * a[i][1]);
             shopping_list_array.push([name.textContent, quantity.textContent, price.textContent]);
         }
     }
@@ -110,7 +110,7 @@ function item_update() {
                 scroll_lock = true;
             });
         }
-        else if ((element.className == 'quantity' || element.className == 'price') && touchmove == false) {
+        else if ((element.className == 'quantity' || element.className == 'price') && element.children.length == 0 && touchmove == false) {
             let input = document.createElement('input');
             input.classList.add('update');
             input.setAttribute('type', 'text');
