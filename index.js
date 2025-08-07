@@ -14,11 +14,11 @@ function load() {
 
             let quantity = document.createElement('div');
             quantity.classList.add('quantity');
-            quantity.textContent = a[i][1];
+            quantity.textContent = Number(a[i][1]).toLocaleString('ko-KR');
 
             let price = document.createElement('div');
             price.classList.add('price');
-            price.textContent = a[i][2];
+            price.textContent = Number(a[i][2]).toLocaleString('ko-KR');
 
             item.appendChild(name);
             item.appendChild(quantity);
@@ -26,7 +26,7 @@ function load() {
 
             shopping_list.appendChild(item);
             total_price_value += (a[i][2] * a[i][1]);
-            shopping_list_array.push([name.textContent, quantity.textContent, price.textContent]);
+            shopping_list_array.push([a[i][0], a[i][1], a[i][2]]);
         }
     }
     
